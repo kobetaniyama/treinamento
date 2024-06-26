@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+  <div class="container">
+    <h1 class="container__title">Todo <span class="green">List</span></h1>
+    <form class="form" id='form'>
+      <input type="text" name="input" id="input" placeholder="Enter you task here">
+      <input type="submit" value="Add" id="add-btn">
+    </form>
+    <ul class="todo-list">
+
+    </ul>
+  </div>
+  <script>
+    function onChange(event, id) {
+      const isChecked = event.target.checked;
+      console.log(isChecked, id);
+    }
+
+    function deleteItem(id) {
+  const listItem = document.getElementById(id);
+  if (listItem) {
+    listItem.remove();
+  }
+}
+  </script>
+  <!-- <script src="script.js"></script> -->
+</body>
+
+</html>
